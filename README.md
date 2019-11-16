@@ -2,10 +2,6 @@
 
 [The VidarDB](https://vidardb.github.io), one unified database system, aims for fast ingestion and immediate analysis. 
 
-## Contributing
-
-Contributions are welcome. Feel free to open a pull request with changes.
-
 ### Running it Locally
 
 It can be helpful to preview changes on your computer before opening a pull request. The *VidarDB* uses the [Jekyll static site generator](http://jekyllrb.com/). After forking or cloning the repository, perform the following steps to generate the site and preview it:
