@@ -1,6 +1,6 @@
 # VidarDB
 
-[The VidarDB](https://vidardb.github.io), one unified database system, aims for fast ingestion and immediate analysis. 
+The [VidarDB](https://www.vidardb.com), one unified database system, aims for fast ingestion and immediate analysis. 
 
 ### Running it Locally
 
