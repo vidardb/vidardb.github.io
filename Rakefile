@@ -12,7 +12,7 @@ task :default => :serve
 desc 'Set up the build environment'
 task :init do
     # Install packages
-    sh 'bundle2.4 install --path vendor/bundle'
+    sh 'bundle install --path vendor/bundle'
 end
 
 desc 'Clean up the generated site'
@@ -79,11 +79,11 @@ def jekyll(opts = '')
     end
 
     if opts=='serve'
-        host_opt = '--host 0.0.0.0'
+        host_opt = '--watch --host 0.0.0.0'
     else
         host_opt = ''
     end
 
-    sh "bundle2.4 exec jekyll #{opts}#{dev} --trace #{host_opt}"
+    sh "bundle exec jekyll #{opts}#{dev} --trace #{host_opt}"
 end
 

@@ -1,8 +1,8 @@
-title: "Markdown Guide"
-url: https://www.markdownguide.org # site url
+title: "VidarDB"
+url: https://www.vidardb.com # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 
-repo: http://github.com/mattcone/markdown-guide
+repo: http://github.com/vidardb/vidardb.github.io
 comments: false
 
 plugins:
@@ -32,7 +32,7 @@ destination: ./_site
 
 # Author settings
 author:
-  name     : "Matt Cone"
+  name : "soarpenguin"
 
 # social settings
 og_locale: "en_US"
