@@ -52,6 +52,12 @@ task :serve => ['copy_assets'] do
     jekyll('serve')
 end
 
+desc 'Start server and regenerate files on dev mode.'
+task :dev => ['clean', 'copy_assets'] do
+    #check_for_required_files(:warning => true)
+    jekyll('dev')
+end
+
 # rake test
 desc "build and test website"
 task :test do
@@ -80,6 +86,9 @@ def jekyll(opts = '')
 
     if opts=='serve'
         host_opt = '--watch --host 0.0.0.0'
+    elsif opts=='dev'
+        opts = 'serve'
+	host_opt = '--port 8888 --watch --host 0.0.0.0'
     else
         host_opt = ''
     end

@@ -2,12 +2,17 @@ title: "VidarDB"
 url: https://www.vidardb.com # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 
-repo: http://github.com/vidardb/vidardb.github.io
+repo: https://github.com/vidardb/vidardb
 comments: false
 
 plugins:
   - jekyll-last-modified-at
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-babel
+  - jekyll-github-metadata
+  - bourbon
+  - neat
 
 collections:
   basic-syntax:
