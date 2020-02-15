@@ -10,16 +10,15 @@
 
     a {
         color: $cream;
-        vertical-align: middle;
         &:hover { color: lighten($cream, 8); }
     }
 
     // VidarDB logo
     a.logo {
-        display: inline-block;
+        display: table;
         @include span-columns(2);
         @include font-size-rem(22);
-        font-weight: 400;
+        font-weight: 500;
         text-indent: 15px;
         line-height: rem(30);
         width: 27.5%;
@@ -27,8 +26,9 @@
         background-image: url('/assets/images/vidardb-head-white.svg');
         background-repeat: no-repeat;
         background-size: contain;
+        vertical-align: middle;
         background-position: bottom left;
-        margin-bottom: .5rem;
+        margin-bottom: .9rem;
     }
 
     ul {
@@ -79,7 +79,8 @@
     //   -> used on the community + about pages
     &.translucent {
         margin-bottom: 0;
-        position: absolute;
+        // position: absolute;
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: 4;
@@ -243,42 +244,3 @@ body.pmr-open #wrapper { left: -50%; }
         }
     }
 }
-
-/*** DEPRECATED
-
-// DEPRECATED REMOVE TODO
-// Open wider on mobile search (like FB)
-body.pml-open-wide {
-    #wrapper { left: 100%; }
-    .push-menu-left { width: 100%; }
-    .mobile-search input { text-align: left; }
-}
-// DEPRECATED TODO REMOVE
-// review and include relevant styles for the API and docs navbars
-.mobile-doc-links {
-    height: 92%;
-    overflow-y: scroll;
-    margin-top: $base-spacing*4;
-    width: 106%;
-
-    h1, .nav-header {
-        @include font-size-rem(14);
-        color: lighten($teal, 15);
-        cursor: pointer;
-        font-family: $sans-serif-semi-bold;
-        font-weight: 600;
-        padding: $base-spacing $base-spacing 0;
-        text-transform: uppercase;
-
-        &:hover { background: none; }
-    }
-    ul { display: none; }
-    // API nav list needs to show
-    ul.nav-list { display: block; }
-    ul li a {
-        @include font-size-rem(16);
-        color: $surf;
-    }
-}
-
-***/
