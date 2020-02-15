@@ -12,7 +12,7 @@ task :default => :serve
 desc 'Set up the build environment'
 task :init do
     # Install packages
-    sh 'bundle install --path vendor/bundle'
+    sh 'bundle install'
 end
 
 desc 'Clean up the generated site'
