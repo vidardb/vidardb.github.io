@@ -1,10 +1,9 @@
 title: "VidarDB"
-url: https://www.vidardb.com # site url
-baseurl: "" # apply repo name if use it under gh-pages branch
-
-repo: https://github.com/vidardb/vidardb
+address: www.vidardb.com # site url
+repo: github.com/vidardb/vidardb
 comments: false
 
+exclude: ["vendor", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.txt", "Rakefile", "_drafts"]
 plugins:
   - jekyll-last-modified-at
   - jekyll-sitemap
@@ -14,26 +13,20 @@ plugins:
   - bourbon
   - neat
 
-collections:
-  basic-syntax:
-  extended-syntax:
-  tools:
-    output: true
-    permalink: /tools/:title/
-
-defaults:
-  - scope:
-      type: tools
-    values:
-      layout: tool
-
-# Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : rouge
-
 source: ./
 destination: ./_site
+sass:
+  sass_dir: _sass
+
+# Blog settings
+paginate: 5
+paginate_file: blog/index.html
+paginate_path: /blog/page:num
+permalink: /blog/:title
+excerpt_separator: <!--more-->
+
+markdown    : kramdown
+highlighter : rouge
 
 # Author settings
 author:
@@ -42,10 +35,4 @@ author:
 # social settings
 og_locale: "en_US"
 
-kramdown:
-  syntax_highlighter: rouge
-  input: GFM
-  auto_ids:       true
-  toc_levels:     1..3
 
-exclude: ["vendor", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.txt", "Rakefile"]
