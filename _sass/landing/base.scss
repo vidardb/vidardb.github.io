@@ -117,13 +117,14 @@ body.landing {
 
     h1 {
         @include font-size-rem(46);
-        line-height: rem(55);
+        line-height: rem(110);
         color: $cream;
         font-family: $sans-serif-semi-bold;
         font-weight: 600;
         margin: 0 auto;
 
         span {
+            line-height: rem(75);
             font-family: $sans-serif;
             font-weight: 100;
             display: block;
