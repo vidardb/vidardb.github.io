@@ -1,3 +1,5 @@
+#npm --registry http://registry.npm.taobao.org/ install
+
 #require 'html-proofer'
 #
 
