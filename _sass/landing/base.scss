@@ -345,6 +345,83 @@ body.landing {
     }
 }
 
+
+/* ---
+   Landing: VidarDB features
+   --- */
+.landing .feature {
+    padding-top: $base-spacing*1.5;
+    padding-bottom: $base-spacing*5;
+    @include media($mobile) { padding: $base-spacing*2 0; }
+
+    p {
+        line-height: rem(28);
+        margin: $base-spacing*1.5 0 0;
+    }
+    .button { margin-top: $base-spacing/2; }
+
+    &.modern-stacks {
+        padding-top: $base-spacing*3;
+        padding-bottom: 0;
+        .feature-content {
+            @include outer-container;
+            padding-right: 0;
+            padding-top: $base-spacing*3;
+        }
+        article {
+            @include omega-reset(2n);
+            @include span-columns(5.5 of 12);
+            @include omega(2n);
+            margin-bottom: $base-spacing*4;
+
+            border-bottom: thin solid rgb(236, 236, 236);
+            height: rem(300);
+            overflow: hidden;
+
+            h2 {
+                font-weight: 500;
+                @include font-size-rem(20);
+            }
+            p:first-of-type {
+                margin-top: rem(10);
+            }
+            img {
+                float: none;
+                width: auto;
+                margin-top: rem(30);
+            }
+            &:nth-child(even) { @include shift(1); }
+
+            // Properly sizing the illustrations
+            &:nth-child(1) img {
+                width: 80%;
+                margin-top: rem(28);
+            }
+            &:nth-child(2) img {
+                width: 80%;
+                margin-top: rem(28);
+            }
+            &:nth-child(3) img {
+                width: 80%;
+                margin-top: rem(28);
+            }
+            &:nth-child(4) img {
+                width: 80%;
+                margin-top: rem(28);
+            }
+        }
+
+        @include media($mobile) {
+            article, article:nth-child(even) {
+                @include fill-parent;
+                @include shift(0);
+                margin-bottom: $base-spacing*2;
+            }
+        }
+    }
+}
+
+
 /* ---
    Landing: get started / install CTA
    --- */
