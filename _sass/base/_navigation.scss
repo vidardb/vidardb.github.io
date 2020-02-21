@@ -20,7 +20,7 @@
         @include font-size-rem(22);
         font-weight: 500;
         text-indent: 19px;
-        line-height: rem(20);
+        line-height: rem(30);
         width: 27.5%;
         max-height: 1.1em;
         background-image: url('/assets/images/vidardb-head-white.svg');
@@ -42,7 +42,7 @@
         @include font-size-rem(18);
         display: inline-block;
         font-family: $sans-serif-semi-bold;
-        line-height: rem(20);
+        line-height: rem(28);
         // text-transform: lowercase;
         font-weight: 600;
     }
