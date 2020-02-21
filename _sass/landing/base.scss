@@ -6,7 +6,7 @@ body.landing {
     .site-nav {
         @extend .site-nav, .translucent;
         margin-bottom: 0;
-        background: transparent;
+        background: rgb(33, 71, 83);
     }
 
     h1 {
