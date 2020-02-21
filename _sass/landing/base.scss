@@ -351,7 +351,7 @@ body.landing {
    --- */
 .landing .feature {
     padding-top: $base-spacing*1.5;
-    padding-bottom: $base-spacing*5;
+    padding-bottom: $base-spacing*4;
     @include media($mobile) { padding: $base-spacing*2 0; }
 
     p {
@@ -363,19 +363,20 @@ body.landing {
     &.modern-stacks {
         padding-top: $base-spacing*3;
         padding-bottom: 0;
+        opacity: 1;
         .feature-content {
             @include outer-container;
             padding-right: 0;
-            padding-top: $base-spacing*3;
+            padding-top: $base-spacing*2;
         }
         article {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            margin-bottom: $base-spacing*4;
+            margin-bottom: $base-spacing*3;
 
             border-bottom: thin solid rgb(236, 236, 236);
-            height: rem(300);
+            height: rem(400);
             overflow: hidden;
 
             h2 {
@@ -388,26 +389,27 @@ body.landing {
             img {
                 float: none;
                 width: auto;
-                margin-top: rem(30);
+                margin-top: rem(22);
+                margin-left: rem(40);
             }
             &:nth-child(even) { @include shift(1); }
 
             // Properly sizing the illustrations
             &:nth-child(1) img {
                 width: 80%;
-                margin-top: rem(28);
+                margin-top: rem(45);
             }
             &:nth-child(2) img {
                 width: 80%;
-                margin-top: rem(28);
+                margin-top: rem(0);
             }
             &:nth-child(3) img {
                 width: 80%;
-                margin-top: rem(28);
+                margin-top: rem(20);
             }
             &:nth-child(4) img {
                 width: 80%;
-                margin-top: rem(28);
+                margin-top: rem(20);
             }
         }
 
