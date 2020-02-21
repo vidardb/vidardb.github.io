@@ -374,6 +374,7 @@ body.landing {
             @include span-columns(5.5 of 12);
             @include omega(2n);
             margin-bottom: $base-spacing*3;
+            text-align: justify;
 
             border-bottom: thin solid rgb(236, 236, 236);
             height: rem(400);
@@ -397,7 +398,7 @@ body.landing {
             // Properly sizing the illustrations
             &:nth-child(1) img {
                 width: 80%;
-                margin-top: rem(45);
+                margin-top: rem(30);
             }
             &:nth-child(2) img {
                 width: 80%;
