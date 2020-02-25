@@ -83,6 +83,7 @@
     .footer-links {
         @extend .three-quarter;
         margin-top: $base-spacing*2;
+        white-space: nowrap;
 
         header {
             margin-bottom: rem(10);

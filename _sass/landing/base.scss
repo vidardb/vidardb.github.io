@@ -43,7 +43,7 @@ body.landing {
 /* ---
    Landing: hero wrapper
    --- */
-.landing .hero-wrapper, body.landing .landing .hero-wrapper {
+body.landing .landing .hero-wrapper {
     @include background-image(linear-gradient(top, rgb(33, 71, 83) 0%, rgb(26, 81, 97) 50%,
         rgb(28, 80, 100) 81%, rgb(29, 79, 95) 100%));
     position: relative;
@@ -147,39 +147,6 @@ body.landing {
 }
 
 /* ---
-   Landing: social stats
-   --- */
-.landing .hero-notes {
-    $_height: rem(32);
-    background: rgba(24, 75, 90, 0.85);
-    padding-bottom: $base-spacing/2;
-    padding-top: $base-spacing/2;
-
-    p {
-        @include font-size-rem(16);
-        line-height: rem(19);
-        color: rgb(198, 222, 220);
-        font-family: $sans-serif-medium;
-        font-weight: 500;
-        text-align: center;
-        margin-bottom: 0;
-        padding-top: $base-spacing/5;
-        a { color: rgb(198, 222, 220); }
-        .headline-latest-release { font-weight: bold; }
-        display: inline-block;
-        margin-right: rem(25); // update to rem(40)
-        &:last-child { margin-right: 0; }
-        i { margin-right: rem(8); }
-    }
-
-    .social-wrapper {
-        margin: 0 auto;
-        max-width: 90%;
-        text-align: center;
-    }
-}
-
-/* ---
    Landing: shared typography styles for the intro & features
    --- */
 .intro, .feature {
@@ -227,124 +194,56 @@ body.landing {
    --- */
 .landing .intro {
     background: white;
-    padding-top: $base-spacing*3.5;
+    padding-top: $base-spacing*1.5;
 
     .headline-latest-release { font-weight: bold; }
     @include media($mobile) { padding-top: $base-spacing*2; }
 
-    .intro-content {
-        margin-bottom: $base-spacing*5;
-        @include media($mobile) { margin-bottom: $base-spacing*2.5; }
-        h1 {
-            @include font-size-rem(30);
-            margin-bottom: rem(25);
+    &.modern-stacks {
+        padding-top: $base-spacing*2;
+        //padding-bottom: 0;
+        opacity: 1;
+        .feature-content {
+            @include outer-container;
+            padding-right: 0;
+            padding-top: $base-spacing*2;
         }
-        p {
-            @include font-size-rem(23);
-            margin-bottom: rem(25);
-        }
-        a.button { margin-top: $base-spacing; }
-    }
-}
 
-/* ---
-   Landing: example use cases
-   --- */
-.landing .examples {
-    background: rgb(241, 245, 245);
-    padding: $base-spacing*3.5 0;
+        article {
+            @include omega-reset(2n);
+            @include span-columns(5.5 of 12);
+            @include omega(2n);
+            margin-left: rem(0);
+            text-align: justify;
 
-    h1 {
-        text-align: center;
+            height: rem(480);
+            overflow: hidden;
 
-        @include media($mobile) { line-height: rem(44); }
-    }
-
-    ul {
-        @include outer-container;
-        padding: $base-spacing*2 0 $base-spacing;
-    }
-
-    .example {
-        display: none;
-
-        &.active { display: block; }
-
-        h3 {
-            @include font-size-rem(22);
-            font-weight: 500;
-            margin-bottom: $base-spacing/2;
-        }
-        // Initially hide contents and add transition
-        @include media($large-screen-up) {
-            h3 { margin-top: $base-spacing/2; }
-            h3, p, img {
-                @include transition(margin-top 0.2s linear, opacity 0.2s linear);
-                opacity: 0;
+            h2 {
+                font-weight: 500;
+                @include font-size-rem(20);
             }
+            p:first-of-type {
+                margin-top: rem(10);
+            }
+            img {
+                float: none;
+                width: 100%;
+                margin-top: rem(25);
+                margin-left: rem(0);
+            }
+            &:nth-child(even) { @include shift(1); }
         }
-
-        img { @extend .third; }
-
-        .example-text {
-            @extend .two-third;
-            padding: $base-spacing*3 $base-spacing 0 $base-spacing*2;
-        }
-        p { @include font-size-rem(20); }
-
-        // Fade in contents when tab is active
-        h3.active, p.active, img.active {
-            margin-top: 0;
-            opacity: 1;
-        }
-
-        // Mobile
-        @include media($mobile) {
-            img { margin: $base-spacing 0 }
-            // Mobile padding
-            padding: $base-spacing*2 0;
-        }
-    }
-    // Tab navigation for examples
-    nav {
-        @include outer-container;
-        border-top: thin solid rgb(202, 221, 221);
-        margin-top: $base-spacing;
-        padding: $base-spacing/1.5 0;
-        text-align: center;
 
         @include media($mobile) {
-            border: none;
-        }
-
-        a {
-            @include transition(all 0.1s linear);
-            @include font-size-rem(16);
-            border-top: 2px solid transparent;
-            font-weight: 600;
-            padding: $base-spacing/1.2 0;
-
-            &:hover { border-top-color: rgb(202, 221, 221); }
-
-            @include media($mobile) {
-                border-top: none;
-                border-bottom: 1px solid white;
-                display: block;
+            article, article:nth-child(even) {
+                @include fill-parent;
+                @include shift(0);
+                margin-bottom: $base-spacing*2;
             }
-            @include media($medium-screen-up) {
-                margin: 0 $base-spacing;
-            }
-            @include media($large-screen-up) {
-                margin: 0 $base-spacing*1.5;
-            }
-        }
-        a.active {
-            border-color: lighten($teal, 10);
-            color: $teal;
         }
     }
 }
-
 
 /* ---
    Landing: VidarDB features
@@ -355,29 +254,29 @@ body.landing {
     @include media($mobile) { padding: $base-spacing*2 0; }
 
     p {
-        line-height: rem(28);
-        margin: $base-spacing*1.5 0 0;
+        line-height: rem(25);
+        margin: $base-spacing*1 0 0;
     }
     .button { margin-top: $base-spacing/2; }
 
     &.modern-stacks {
-        padding-top: $base-spacing*3;
+        padding-top: $base-spacing*2;
         padding-bottom: 0;
         opacity: 1;
         .feature-content {
             @include outer-container;
             padding-right: 0;
-            padding-top: $base-spacing*2;
+            padding-top: $base-spacing*1.5;
         }
         article {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            margin-bottom: $base-spacing*3;
+            margin-bottom: $base-spacing*2;
             text-align: justify;
 
             border-bottom: thin solid rgb(236, 236, 236);
-            height: rem(400);
+            height: rem(380);
             overflow: hidden;
 
             h2 {
@@ -398,19 +297,19 @@ body.landing {
             // Properly sizing the illustrations
             &:nth-child(1) img {
                 width: 80%;
-                margin-top: rem(30);
+                margin-top: rem(20);
             }
             &:nth-child(2) img {
                 width: 80%;
-                margin-top: rem(0);
+                margin-top: rem(50);
             }
             &:nth-child(3) img {
                 width: 80%;
-                margin-top: rem(20);
+                margin-top: rem(30);
             }
             &:nth-child(4) img {
                 width: 80%;
-                margin-top: rem(20);
+                margin-top: rem(0);
             }
         }
 
@@ -421,40 +320,6 @@ body.landing {
                 margin-bottom: $base-spacing*2;
             }
         }
-    }
-}
-
-
-/* ---
-   Landing: get started / install CTA
-   --- */
-.landing .get-started.callout {
-    padding: $base-spacing*5 0;
-    @include background-image(url(/assets/images/landing/code-pattern.png), linear-gradient(top, darken($cream, 2)  0%, lighten($cream, 2)  50%,
-        lighten($cream, 2)  81%, darken($cream, 2)  100%));
-    background-repeat: repeat;
-    position: relative;
-    text-align: center;
-    z-index: 6;
-
-    h1 {
-        @include font-size-rem(37);
-        color: $teal;
-        font-weight: 400;
-        margin-bottom: $base-spacing*2.5;
-    }
-    a {
-        // Extends the button (included to overcome css specificity)
-        @extend .button;
-
-        width: rem(200);
-        &.install { width: rem(220); }
-        &.light { margin-right: $base-spacing; }
-    }
-    // Mobile
-    @include media($mobile) {
-        padding: $base-spacing*2 0;
-        a { width: auto; }
     }
 }
 
@@ -481,111 +346,4 @@ body.landing {
         h1 { margin-bottom: $base-spacing*2; }
         padding: $base-spacing 0;
     }
-}
-
-// Events
-.landing .events {
-    @extend .half;
-
-    h1 {
-        @include font-size-rem(24);
-        font-weight: 400;
-        margin: 0;
-        padding: 0 0 $base-spacing;
-    }
-
-    li {
-        border-bottom: 1px solid #f2f2f2;
-        padding-bottom: $base-spacing/1.5;
-        margin-bottom: $base-spacing;
-
-        span {
-            @include font-size-rem(13);
-            display: block;
-            font-family: $helvetica;
-            font-weight: 600;
-            margin-bottom: $base-spacing/3;
-            text-transform: uppercase;
-        }
-
-        &:first-child, &:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-    }
-
-    a.button { display: block; }
-
-    // Device styles
-    @include media($mobile) {
-        padding-left: 0;
-        li:first-child, li:last-child {
-            border: none;
-            padding: 0;
-        }
-        ul { margin-top: $base-spacing*2; }
-    }
-
-    @include media($medium-screen-up) {
-        padding-left: 0;
-        margin-left: 0;
-        width: 100%;
-        ul { margin-top: $base-spacing*2; }
-    }
-
-    @include media($large-screen-up) {
-        margin-left: 5%;
-        padding-left: $base-spacing*1.5;
-        width: 40%;
-        ul { margin-top: 0; }
-    }
-}
-
-/* ---
-   Landing: community videos
-   --- */
-.landing .videos {
-    // Show grid columns only on tablets and larger
-    @extend .half;
-    @include media($medium-screen-up) {
-        @include column-count(2);
-        @include column-gap(1rem);
-    }
-    @include media($large-screen-up) { width: 55%; }
-
-    // Extend the basic design pattern for video grids
-    @extend .video-grid;
-
-    // Set individual preview images
-    .video {
-        // Preview image
-        &:nth-child(1) {
-            background: url('/assets/images/events/ryan-geolocation.png') center center no-repeat;
-            background-size: cover;
-        }
-        &:nth-child(2) {
-            background: url('/assets/images/events/michael-realtime.png') center top no-repeat;
-            background-size: cover;
-        }
-        &:nth-child(3) {
-            background: url('/assets/images/events/josh-publish.png') center top no-repeat;
-            background-size: cover;
-        }
-        &:nth-child(4) {
-            background: url('/assets/images/events/annie-art.png') center center no-repeat;
-            background-size: cover;
-        }
-
-        // Adjust variable video height
-        &:nth-child(2), &:nth-child(3) { height: rem(300); }
-        &:nth-child(1), &:nth-child(4) { height: rem(350); }
-    }
-}
-
-/* ---
-   Landing: modal for talks / videos
-   --- */
-.landing .video-modal {
-    // Extends design pattern _video-modal
-    @extend .video-modal;
 }
