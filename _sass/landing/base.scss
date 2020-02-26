@@ -213,7 +213,8 @@ body.landing .landing .hero-wrapper {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            margin-left: rem(0);
+            // margin-left: rem(0);
+            margin-right: rem(0);
             text-align: justify;
 
             height: rem(480);
@@ -233,6 +234,13 @@ body.landing .landing .hero-wrapper {
                 margin-left: rem(0);
             }
             &:nth-child(even) { @include shift(1); }
+
+            .vidardb-video {
+                // text-align: center;
+                alignment: center;
+                margin-top: rem(25);
+                width: 500px;
+            }
         }
 
         @include media($mobile) {
@@ -321,6 +329,28 @@ body.landing .landing .hero-wrapper {
             }
         }
     }
+}
+
+
+/* ---
+   Landing: example use cases
+   --- */
+.landing .explain-section {
+    background: rgb(241, 245, 245);
+    padding-top: $base-spacing*1.5;
+    // text-align: justify;
+
+    .half_container { width: 48%; float: left; }
+    .half_container_divider { margin-left: 4%; }
+    .half_container_image { width: 30%; float: left; }
+    .half_container_image img { width: 100%; }
+    .half_container_text { width: 65%; float: right; }
+    .boxes_divider { display: none; }
+    .three_container { width: 30%; vertical-align: top; text-align: center; float: left; }
+    .three_container_divider { width: 5%; vertical-align: top; height: 5px; float: left; }
+    .small_print { font-size: 14px; color: #b9b9b9; }
+    .regular_divider { width: 100%; clear: both; height: 0px; margin-top: 48px; display: inline-block; }
+    .mobile_margin_bottom_needed {}
 }
 
 /* ---

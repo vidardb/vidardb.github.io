@@ -25,10 +25,10 @@ var SiteUtils =
                     event.preventDefault();
                     $('body').toggleClass('pmr-open');
                 });
+
                 /* ------------
                    Blog right panel should be set to a fixed position on scroll
                    ------------ */
-
                 var $_sidebar = $('.blog-sidebar ul');
 
                 if ($_sidebar.length) {
@@ -45,11 +45,10 @@ var SiteUtils =
                         }
                     });
                 }
+
                 /* ------------
                    Docs navigation: collapse / expand sections
                    ------------ */
-
-
                 $('.docs-nav h1, .mobile-doc-links h1').click(function (event) {
                     $(event.target).parent().toggleClass('expand').next('ul').slideToggle('fast', function () {
                         // Refresh any waypoints: expanding the the menu may have shifted trigger points
@@ -66,11 +65,10 @@ var SiteUtils =
                 _this.create_video_modals();
             });
         }
+
         /* ------------
            Landing page: video modals
            ------------ */
-
-
         _createClass(SiteUtils, [{
             key: "create_video_modals",
             value: function create_video_modals() {
@@ -119,11 +117,11 @@ var SiteUtils =
                     $('.iframe-container').empty();
                 });
             }
+
             /* ------------
                Rewrite links that point to multi-language
                documents, based on the language switcher + a cookie
                ------------*/
-
         }, {
             key: "rewrite_links",
             value: function rewrite_links() {
