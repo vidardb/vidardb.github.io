@@ -337,8 +337,17 @@ body.landing .landing .hero-wrapper {
    --- */
 .landing .explain-section {
     background: rgb(241, 245, 245);
-    padding-top: $base-spacing*1.5;
+    padding-top: $base-spacing*1.2;
+    padding-bottom: $base-spacing*3;
     // text-align: justify;
+
+    h1 {
+        padding-top: $base-spacing*1.5;
+    }
+
+    p:first-of-type {
+        height: rem(25);
+    }
 
     .half_container { width: 48%; float: left; }
     .half_container_divider { margin-left: 4%; }
@@ -351,6 +360,14 @@ body.landing .landing .hero-wrapper {
     .small_print { font-size: 14px; color: #b9b9b9; }
     .regular_divider { width: 100%; clear: both; height: 0px; margin-top: 48px; display: inline-block; }
     .mobile_margin_bottom_needed {}
+
+    @include media($mobile) {
+        site-container, site-container:nth-child(even) {
+            @include fill-parent;
+            @include shift(0);
+            margin-bottom: $base-spacing*2;
+        }
+    }
 }
 
 /* ---
