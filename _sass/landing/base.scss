@@ -337,17 +337,13 @@ body.landing .landing .hero-wrapper {
    --- */
 .landing .explain-section {
     background: rgb(241, 245, 245);
-    padding-top: $base-spacing*1.2;
-    padding-bottom: $base-spacing*3;
-    // text-align: justify;
-
-    h1 {
-        padding-top: $base-spacing*1.5;
-    }
-
-    p:first-of-type {
-        height: rem(25);
-    }
+    //padding-top: $base-spacing*1.2;
+    //padding-bottom: $base-spacing*2;
+    //// text-align: justify;
+    //
+    //p:first-of-type {
+    //    height: rem(25);
+    //}
 
     .half_container { width: 48%; float: left; }
     .half_container_divider { margin-left: 4%; }
