@@ -3,7 +3,7 @@ address: www.vidardb.com # site url
 repo: github.com/vidardb
 comments: false
 
-exclude: ["vendor", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.txt", "Rakefile", "_drafts"]
+exclude: ["vendor", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.txt", "Rakefile", "_drafts", "tmp"]
 plugins:
   - jekyll-last-modified-at
   - jekyll-sitemap
