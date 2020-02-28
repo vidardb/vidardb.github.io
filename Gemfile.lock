@@ -67,7 +67,7 @@ GEM
     neat (1.7.4)
       bourbon (>= 4.0)
       sass (>= 3.3)
-    nokogiri (1.10.4)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     octokit (4.16.0)
       faraday (>= 0.9)
@@ -119,7 +119,7 @@ DEPENDENCIES
   jekyll-sitemap
   json (~> 2.0)
   neat (~> 1.7.1)
-  nokogiri (~> 1.10.4)
+  nokogiri (~> 1.10.8)
   pry
   rake
   rouge (~> 1.10.1)
