@@ -338,8 +338,8 @@ body.landing .landing .hero-wrapper {
 .landing .explain-section {
     background: rgb(241, 245, 245);
     position: relative;
-    padding-top: $base-spacing*1.2;
-    padding-bottom: $base-spacing*2;
+    padding-top: $base-spacing*1.5;
+    padding-bottom: $base-spacing*1.5;
     // text-align: justify;
 
     p {
@@ -365,6 +365,9 @@ body.landing .landing .hero-wrapper {
             @include shift(0);
             height: rem(200);
             margin-bottom: $base-spacing*2;
+        }
+        .boxes_divider, .regular_divider {
+            display: none;
         }
     }
 }

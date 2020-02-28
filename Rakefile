@@ -21,6 +21,7 @@ desc 'Clean up the generated site'
 task :clean do
     rm_rf '_site'
     rm_rf '_deploy'
+    rm_rf '.sass-cache'
     rm '.jekyll-metadata', :force => true
     $generated_files.each{ |d|
         rm_rf d
