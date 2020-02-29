@@ -95,6 +95,8 @@ body.landing .landing .hero-wrapper {
             // Extends the button (included to overcome css specificity)
             @extend .button;
 
+            text-align: center;
+            white-space: nowrap;
             @include font-size-rem(18);
             margin: 0 $base-spacing;
             padding: $base-spacing/1.5 inherit;
@@ -188,7 +190,6 @@ body.landing .landing .hero-wrapper {
     }
 }
 
-
 /* ---
    Landing: intro
    --- */
@@ -224,6 +225,7 @@ body.landing .landing .hero-wrapper {
                 font-weight: 500;
                 @include font-size-rem(20);
             }
+
             p:first-of-type {
                 margin-top: rem(10);
             }
@@ -240,6 +242,10 @@ body.landing .landing .hero-wrapper {
                 alignment: center;
                 margin-top: rem(25);
                 width: 500px;
+
+                p {
+                    height: 35px;
+                }
             }
         }
 
@@ -248,6 +254,15 @@ body.landing .landing .hero-wrapper {
                 @include fill-parent;
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
+            }
+            .vidardb-video > p {
+                display: none;
+            }
+            .vidardb-video {
+                // text-align: center;
+                alignment: center;
+                margin-top: rem(15);
+                width: 400px;
             }
         }
     }
@@ -330,7 +345,6 @@ body.landing .landing .hero-wrapper {
         }
     }
 }
-
 
 /* ---
    Landing: example use cases
