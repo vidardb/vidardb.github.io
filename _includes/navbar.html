@@ -6,7 +6,7 @@
         <li><a href="//{{ site.repo }}/vidardb">Product</a></li>
         <li><a href="/">Demo</a></li>
         <li><a href="//{{ site.address }}/docs">Doc</a></li>
-        <li><a href="/">FAQ</a></li>
+        <li><a href="//{{ site.address }}/docs/faq/">FAQ</a></li>
     </ul>
 </nav>
 <nav class="site-nav">
@@ -17,7 +17,7 @@
             <li{% if page.docs_active == 'Product' %}{{ active }}{% endif %}><a href="//{{ site.repo }}/vidardb">Product</a></li>
             <li{% if page.active == 'Demo' %}{{ active }}{% endif %}><a href="/">Demo</a></li>
             <li{% if page.active == 'Doc' %}{{ active }}{% endif %}><a href="//{{ site.address }}/docs">Doc</a></li>
-            <li{% if page.active == 'FAQ' %}{{ active }}{% endif %}><a href="/">FAQ</a></li>
+            <li{% if page.active == 'FAQ' %}{{ active }}{% endif %}><a href="//{{ site.address }}/docs/faq/">FAQ</a></li>
         </ul>
     </div>
 </nav>
