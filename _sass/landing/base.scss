@@ -202,7 +202,6 @@ body.landing .landing .hero-wrapper {
 
     &.modern-stacks {
         padding-top: $base-spacing*2;
-        //padding-bottom: 0;
         opacity: 1;
         .feature-content {
             @include outer-container;
@@ -214,10 +213,8 @@ body.landing .landing .hero-wrapper {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            // margin-left: rem(0);
             margin-right: rem(0);
             text-align: justify;
-
             height: rem(480);
             overflow: hidden;
 
@@ -238,13 +235,18 @@ body.landing .landing .hero-wrapper {
             &:nth-child(even) { @include shift(1); }
 
             .vidardb-video {
-                // text-align: center;
-                alignment: center;
-                margin-top: rem(25);
-                width: 500px;
-
+                text-align: center;
                 p {
                     height: 35px;
+                }
+                .vjs-poster {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #my-player {
+                    @include fill-parent;
+                    height: 320px;
                 }
             }
         }
@@ -253,16 +255,15 @@ body.landing .landing .hero-wrapper {
             article, article:nth-child(even) {
                 @include fill-parent;
                 @include shift(0);
-                margin-bottom: $base-spacing*2;
+                // margin-bottom: $base-spacing*1;
             }
-            .vidardb-video > p {
-                display: none;
-            }
+
             .vidardb-video {
-                // text-align: center;
-                alignment: center;
                 margin-top: rem(15);
-                width: 400px;
+                #my-player {
+                    @include fill-parent;
+                    height: 220px;
+                }
             }
         }
     }
