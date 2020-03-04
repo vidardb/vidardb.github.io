@@ -240,11 +240,11 @@ body.landing .landing .hero-wrapper {
                     height: 25px;
                 }
                 .vjs-poster {
-                    margin: 0;
-                    padding: 0;
+                    border-radius: 5px;
                 }
 
                 #my-player {
+                    border-radius: 5px;
                     @include fill-parent;
                     height: 320px;
                 }
@@ -260,7 +260,12 @@ body.landing .landing .hero-wrapper {
             .vidardb-video {
                 margin-top: rem(15);
                 margin-bottom: $base-spacing*1;
+                .vjs-poster {
+                    border-radius: 5px;
+                }
+
                 #my-player {
+                    border-radius: 5px;
                     @include fill-parent;
                     height: 220px;
                 }
