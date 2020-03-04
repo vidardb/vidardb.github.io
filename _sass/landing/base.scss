@@ -237,7 +237,7 @@ body.landing .landing .hero-wrapper {
             .vidardb-video {
                 text-align: center;
                 p {
-                    height: 35px;
+                    height: 25px;
                 }
                 .vjs-poster {
                     margin: 0;
@@ -255,11 +255,11 @@ body.landing .landing .hero-wrapper {
             article, article:nth-child(even) {
                 @include fill-parent;
                 @include shift(0);
-                // margin-bottom: $base-spacing*1;
             }
 
             .vidardb-video {
                 margin-top: rem(15);
+                margin-bottom: $base-spacing*1;
                 #my-player {
                     @include fill-parent;
                     height: 220px;
