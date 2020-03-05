@@ -241,10 +241,12 @@ body.landing .landing .hero-wrapper {
                 }
                 .vjs-poster {
                     border-radius: 5px;
+                    -moz-border-radius: 5px;
                 }
 
                 #my-player {
                     border-radius: 5px;
+                    -moz-border-radius: 5px;
                     @include fill-parent;
                     height: 320px;
                 }
@@ -262,10 +264,12 @@ body.landing .landing .hero-wrapper {
                 margin-bottom: $base-spacing*1;
                 .vjs-poster {
                     border-radius: 5px;
+                    -moz-border-radius: 5px;
                 }
 
                 #my-player {
                     border-radius: 5px;
+                    -moz-border-radius: 5px;
                     @include fill-parent;
                     height: 220px;
                 }
