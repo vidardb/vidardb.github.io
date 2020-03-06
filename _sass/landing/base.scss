@@ -13,6 +13,11 @@ body.landing {
         @include font-size-rem(32);
         font-weight: 400;
     }
+    #one-liner {
+        @include font-size-rem(32);
+        font-weight: 300;
+    }
+
     .landing a { color: $teal; }
 
     // Stylized horizontal rule for sections
