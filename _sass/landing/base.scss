@@ -255,7 +255,7 @@ body.landing {
             @include omega-reset(2n);
             @include span-columns(5.5 of 12);
             @include omega(2n);
-            margin-right: rem(0);
+            // margin-right: rem(0);
             text-align: justify;
             height: rem(480);
             overflow: hidden;
@@ -272,7 +272,7 @@ body.landing {
                 float: none;
                 width: 100%;
                 margin-top: rem(25);
-                margin-left: rem(0);
+                margin-left: rem(10);
             }
             &:nth-child(even) { @include shift(1); }
 
@@ -290,6 +290,7 @@ body.landing {
                     border-radius: 5px;
                     -moz-border-radius: 5px;
                     @include fill-parent;
+                    max-height: 268px;
                     height: 268px;
                 }
             }
@@ -313,6 +314,7 @@ body.landing {
                     border-radius: 5px;
                     -moz-border-radius: 5px;
                     @include fill-parent;
+                    max-height: 200px;
                     height: 120px;
                 }
             }
