@@ -257,7 +257,7 @@ body.landing {
             @include omega(2n);
             // margin-right: rem(0);
             text-align: justify;
-            height: rem(480);
+            height: rem(460);
             overflow: hidden;
 
             h2 {
@@ -275,9 +275,9 @@ body.landing {
                 margin-left: rem(10);
             }
             &:nth-child(even) { @include shift(1); }
-
             .vidardb-video {
                 text-align: center;
+                margin-top: rem(50);
                 p {
                     height: 25px;
                 }
