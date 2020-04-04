@@ -419,7 +419,15 @@ body.landing {
     .half_container_divider { margin-left: 4%; }
     .half_container_image { width: 30%; float: left; }
     .half_container_image img { width: 100%; }
-    .half_container_text { width: 65%; float: right; }
+    .half_container_text {
+        width: 65%;
+        float: right;
+
+        h2 {
+            font-weight: 500;
+            @include font-size-rem(20);
+        }
+    }
     .boxes_divider { display: none; }
     .three_container { width: 30%; vertical-align: top; text-align: center; float: left; }
     .three_container_divider { width: 5%; vertical-align: top; height: 5px; float: left; }
