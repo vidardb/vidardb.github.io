@@ -13,6 +13,7 @@ body.landing {
         @include font-size-rem(32);
         font-weight: 400;
     }
+
     #one-liner {
         @include font-size-rem(32);
         font-weight: 300;
@@ -138,7 +139,7 @@ body.landing {
         }
 
         @include media($mobile) {
-            @include font-size-rem(40);
+            @include font-size-rem(31);
         }
     }
 
@@ -400,6 +401,68 @@ body.landing {
     }
 }
 
+.landing .ai-feature {
+    padding-top: $base-spacing*1.5;
+    padding-bottom: $base-spacing*1;
+    @include media($mobile) { padding: $base-spacing*2 0; }
+    background-color: #fff;
+    height: rem(500);
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    &.modern-stacks {
+        padding-top: $base-spacing*2;
+        padding-bottom: 0;
+        opacity: 1;
+
+        article {
+            margin-bottom: $base-spacing*1;
+        }
+
+        .feature-content {
+            @include outer-container;
+            padding-right: 0;
+            padding-top: $base-spacing*1.5;
+        }
+
+        .column-left {
+            width: 33%;
+            left: 0;
+            position: absolute;
+        }
+        .column-center {
+            width: 33%;
+            margin-left: 33%;
+            position: absolute;
+        }
+        .column-right {
+            width: 33%;
+            right: 0;
+            position: absolute;
+        }
+
+        @include media($mobile) {
+            // div, div:nth-child(n) {
+            //     @include fill-parent;
+            //     @include shift(0);
+            //     height: rem(280);
+            //     margin-bottom: $base-spacing*2;
+            // }
+           
+            height: rem(280);
+        
+            // .column-left, .column-right, .column-center {
+            //     @include fill-parent;
+            //     @include shift(0);
+            //     height: rem(380);
+            //     margin-bottom: $base-spacing*2; 
+            // }
+        }
+    }
+}
+
 /* ---
    Landing: example use cases
    --- */
@@ -433,7 +496,6 @@ body.landing {
     .three_container_divider { width: 5%; vertical-align: top; height: 5px; float: left; }
     .small_print { font-size: 14px; color: #b9b9b9; }
     .regular_divider { width: 100%; clear: both; height: 0px; margin-top: 48px; display: inline-block; }
-    .mobile_margin_bottom_needed {}
 
     @include media($mobile) {
         .half_container, half_container_divider {
