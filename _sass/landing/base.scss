@@ -434,7 +434,7 @@ body.landing {
         }
         .column-center {
             width: 33%;
-            margin-left: 33%;
+            margin-left: 32%;
             position: absolute;
         }
         .column-right {
@@ -450,15 +450,14 @@ body.landing {
             //     height: rem(280);
             //     margin-bottom: $base-spacing*2;
             // }
-           
+
             height: rem(280);
-        
-            // .column-left, .column-right, .column-center {
-            //     @include fill-parent;
-            //     @include shift(0);
-            //     height: rem(380);
-            //     margin-bottom: $base-spacing*2; 
-            // }
+            .column-center {
+                margin-left: 30%;
+            }
+            h4 {
+                @include font-size-rem(9.5);
+            }
         }
     }
 }
