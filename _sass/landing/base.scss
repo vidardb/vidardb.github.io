@@ -354,7 +354,7 @@ body.landing {
             text-align: justify;
 
             border-bottom: thin solid rgb(236, 236, 236);
-            height: rem(380);
+            height: rem(390);
             overflow: hidden;
 
             h2 {
@@ -379,15 +379,24 @@ body.landing {
             }
             &:nth-child(2) img {
                 width: 80%;
-                margin-top: rem(50);
+                margin-top: rem(90);
             }
             &:nth-child(3) img {
                 width: 80%;
-                margin-top: rem(30);
+                margin-top: rem(90);
             }
             &:nth-child(4) img {
                 width: 80%;
+                margin-top: rem(40);
+            }
+            &:nth-child(5) img {
+                width: 80%;
                 margin-top: rem(0);
+                height: 69%;
+            }
+            &:nth-child(6) img {
+                width: 80%;
+                margin-top: rem(40);
             }
         }
 
@@ -396,6 +405,9 @@ body.landing {
                 @include fill-parent;
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
+            } 
+            article:nth-child(5) img {
+                height: 60%;
             }
         }
     }
