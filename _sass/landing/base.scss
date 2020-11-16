@@ -407,6 +407,9 @@ body.landing {
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
             } 
+            article:nth-child(1) img {
+                height: 57%;
+            }
             article:nth-child(5) img {
                 height: 60%;
             }
