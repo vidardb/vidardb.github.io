@@ -374,9 +374,8 @@ body.landing {
 
             // Properly sizing the illustrations
             &:nth-child(1) img {
-                width: 80%;
+                width: 85%;
                 margin-top: rem(20);
-                height: 62%;
             }
             &:nth-child(2) img {
                 width: 80%;
@@ -407,9 +406,9 @@ body.landing {
                 @include shift(0);
                 margin-bottom: $base-spacing*2;
             } 
-            article:nth-child(1) img {
-                height: 57%;
-            }
+            // article:nth-child(1) img {
+            //     width: 95%;
+            // }
             article:nth-child(5) img {
                 height: 60%;
             }
