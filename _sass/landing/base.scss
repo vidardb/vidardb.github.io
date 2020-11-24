@@ -408,7 +408,13 @@ body.landing {
                 margin-bottom: $base-spacing*2;
             } 
             article:nth-child(1) img {
-                width: 90%;
+                margin-top: rem(40);
+            }
+            article:nth-child(2) img {
+                margin-top: rem(60);
+            }
+            article:nth-child(3) img {
+                margin-top: rem(60);
             }
             article:nth-child(5) img {
                 height: 60%;
