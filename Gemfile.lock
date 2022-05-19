@@ -83,7 +83,7 @@ GEM
     neat (1.7.4)
       bourbon (>= 4.0)
       sass (>= 3.3)
-    nokogiri (1.13.4)
+    nokogiri (1.13.5)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     nokogumbo (2.0.4)
