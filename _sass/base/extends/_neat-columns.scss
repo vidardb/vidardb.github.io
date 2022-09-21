@@ -38,6 +38,10 @@
         @include span-columns(4 of 12);
         @include omega(3n);
     }
+    .full {
+        @include span-columns(12 of 12);
+        @include omega();
+    }
 }
 
 @include media($large-screen-up) {
