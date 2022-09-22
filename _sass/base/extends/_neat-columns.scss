@@ -1,9 +1,8 @@
 // Width based on .site-container, includes outer-container()
 @include media($mobile) {
-    .three-quarter, .half, .third, .quarter {
+    .three-quarter, .half, .third, .quarter, .full {
         @include fill-parent;
     }
-
     .sixth {
         @include span-columns(4 of 12);
         @include omega(3n);
