@@ -19,15 +19,15 @@
         @include span-columns(2);
         @include font-size-rem(22);
         font-weight: 500;
-        text-indent: 65px;
-        line-height: rem(65);
+        text-indent: 55px;
+        line-height: rem(60);
         width: 27.5%;
         max-height: 5em;
         background-image: url('/assets/images/vidardb-head-white.svg');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom left;
-        margin-bottom: .9rem;
+        // margin-bottom: .9rem;
     }
 
     ul {
@@ -56,7 +56,7 @@
    --- */
 .site-nav {
     // Spacing within the global nav (i.e. height)
-    .site-container { padding: $base-spacing; }
+    .site-container { padding: $base-spacing/2 $base-spacing; }
 
     li {
         padding: rem(10) rem(3);
