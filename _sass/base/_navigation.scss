@@ -19,10 +19,10 @@
         @include span-columns(2);
         @include font-size-rem(22);
         font-weight: 500;
-        text-indent: 19px;
-        line-height: rem(30);
+        text-indent: 65px;
+        line-height: rem(65);
         width: 27.5%;
-        max-height: 1.1em;
+        max-height: 5em;
         background-image: url('/assets/images/vidardb-head-white.svg');
         background-repeat: no-repeat;
         background-size: contain;
@@ -59,7 +59,7 @@
     .site-container { padding: $base-spacing; }
 
     li {
-        padding: rem(1) rem(3);
+        padding: rem(10) rem(3);
         &.active { border-bottom: 2px solid rgb(59, 101, 115); }
     }
     // Show a mobile navbar
