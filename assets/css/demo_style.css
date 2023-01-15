@@ -1,0 +1,109 @@
+* * * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+    background-color: #D1E1E5;
+}
+
+.title {
+    width: auto;
+    text-align: center;
+    background-color: #214753;
+}
+
+.title h2 {
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.banner {
+    width: auto;
+    background-color: #306677;
+}
+
+.banner .banner_text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding-top: 0.8rem;
+}
+
+.show_part {
+    background-color: #D1E1E5;
+}
+
+.show_part .out_put {
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.show_part .out_put .result_title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.show_part .out_put .out_put_text {
+    min-height: 15rem;
+    border: 6px inset #81b2be;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    padding: 1rem 1.5rem;
+}
+
+.show_part .out_put_select {
+    margin-top: 3rem;
+}
+
+.show_part .out_put_select_choose, .show_part .out_put_select_button {
+    margin: 3rem auto;
+    width: 12rem;
+    height: 2rem;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+
+/* .time_title{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+#time {
+    margin: 2rem;
+    width: 15rem;
+    height: 2.5rem;;
+    border: 4px inset #81b2be;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    padding: 0.2rem 0.4rem;
+} */
+
+.query {
+    width: auto;
+    background-color: #5b92a2;
+}
+
+.query .query_title {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.query .query_content {
+    white-space: pre-wrap;
+    min-height: 18rem;
+    border: 3px inset #cce7ed;
+    font-size: 0.8rem;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem 1.5rem;
+    font-family: sans-serif;
+}

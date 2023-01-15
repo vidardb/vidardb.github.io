@@ -2,10 +2,20 @@
     <html>
     <head>
         <meta charset=utf-8><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type=image/x-icon href=/assets/static/favicon.ico>
         <title>VidarDB</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/demo_style.css">
         <link href=/assets/static/css/app.df85a7b7d0c4b6257796129bb72caaf9.css rel=stylesheet>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sql-formatter@2.3.3/dist/sql-formatter.min.js"></script>
+        <script type="text/javascript" src="assets/js/demo.js"></script>
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160376661-1"></script>
         <script>
@@ -17,9 +27,74 @@
         </script>
     </head>
     <body>
-        <div id=app></div>
-        <script type=text/javascript src=/assets/static/js/manifest.6dc37d5b2309db7c94ff.js></script>
-        <script type=text/javascript src=/assets/static/js/vendor.b98103db420ca18ad0cb.js></script>
-        <script type=text/javascript src=/assets/static/js/app.ba1dfb3eafdbf2df37a9.js></script>
+        <section>
+            <div class="">
+                <div class="row">
+                    <div class="title">
+                        <h2>VidarDB DEMO</h2>
+                    </div>
+                </div>
+    
+                <div class="row banner">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 banner_text">
+                        <P>Analyze results at supercharged speeds!
+                            At an order of magnitude faster query speeds, analysts can run more complex queries to better
+                            leverage
+                            organizational data assets, or work more productively. We have validated the speed of our
+                            patented solution
+                            using the TPC-H methodology.
+                        </P>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+    
+                <div class="row show_part">
+                    <div class="col-lg-2"></div>
+                    <div class="content col-lg-3 out_put" >
+                        <div class="result_title">VidarDB</div>
+                        <div class="out_put_text" id="result2"></div>
+                    </div>
+                    <div class="content col-lg-2 out_put_select">
+                        <form action="">
+                            <div class="row out_put_select_choose">
+                                <select id="query_select">
+                                    <option value="1">TPCH Query1</option>
+                                    <option value="6">TPCH Query6</option>
+                                    <option value="14">TPCH Query14</option>
+                                    <option value="19">TPCH Query19</option>
+                                </select>
+                            </div>
+    
+                            <div class="row out_put_select_choose">
+                                <select id="data_select">
+                                    <option value="vidardb">VidarDB</option>
+                                    <option value="postgres">Postgres</option>
+                                </select>
+                            </div>
+    
+                            <div class="row out_put_select_button" id="output">
+                                <input type="submit" value="Start">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="content col-lg-3 out_put" >
+                        <div class="result_title">Postgres</div>
+                        <div class="out_put_text" id="result1"></div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+    
+                <div class="row query">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4" >
+                        <div class="query_title">SQL Statement</div>
+                        <div class="query_content" id="query_content"></div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+    
+            </div>
+        </section>
     </body>
 </html>
