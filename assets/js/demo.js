@@ -12,7 +12,7 @@ $(document).ready(function () {
 				,AVG(l_extendedprice)                          AS avg_price
 				,AVG(l_discount)                               AS avg_disc
 				,COUNT(l_discount)                             AS count_order
-			FROM lineitem_pg
+			FROM lineitem
 			WHERE l_shipdate <= date '1998-12-01' - interval '90' day
 			GROUP BY  l_returnflag
 					 ,l_linestatus;`;
@@ -69,7 +69,7 @@ $(document).ready(function () {
 				,AVG(l_extendedprice)                          AS avg_price
 				,AVG(l_discount)                               AS avg_disc
 				,COUNT(l_discount)                             AS count_order
-			FROM lineitem_pg
+			FROM lineitem
 			WHERE l_shipdate <= date '1998-12-01' - interval '90' day
 			GROUP BY  l_returnflag
 					 ,l_linestatus;`;
