@@ -23,13 +23,14 @@ $(document).ready(function () {
 		event.preventDefault();
 		var query_select = $("#query_select option:selected").val();
 		var data_select = $("#data_select option:selected").val();
-		var database = false;
+		var use_vidar = "false";
 		
 		var baseUrl = "http://54.161.194.223:8000/query/";
-		var getUrl = baseUrl + query_select + "?" + "vidardb=" + database;
+		var getUrl = baseUrl + query_select + "?" + "vidardb=";
 
 		if (data_select == "vidardb") {
-			database = true;
+			use_vidar = "true";
+			getUrl += use_vidar;
 			$("#result2").html("");
 			$.get(getUrl, function (data) {
 				var queryResult = data.data;
@@ -39,6 +40,7 @@ $(document).ready(function () {
 				$("#result2").html(formatedData);
 			});
 		} else {
+			getUrl += use_vidar;
 			$("#result1").html("");
 			$.get(getUrl, function (data) {
 				var queryResult = data.data;
