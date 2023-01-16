@@ -25,7 +25,7 @@ $(document).ready(function () {
 		var data_select = $("#data_select option:selected").val();
 		var use_vidar = "false";
 		
-		var baseUrl = "http://54.161.194.223:8000/query/";
+		var baseUrl = "https://ec2-107-22-104-10.compute-1.amazonaws.com:8000/query/";
 		var getUrl = baseUrl + query_select + "?" + "vidardb=";
 
 		if (data_select == "vidardb") {
