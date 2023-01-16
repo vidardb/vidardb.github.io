@@ -25,7 +25,7 @@ $(document).ready(function () {
 		var data_select = $("#data_select option:selected").val();
 		var database = false;
 		
-		var baseUrl = "http://192.168.2.17:8000/query/";
+		var baseUrl = "http://54.161.194.223:8000/query/";
 		var getUrl = baseUrl + query_select + "?" + "vidardb=" + database;
 
 		if (data_select == "vidardb") {
