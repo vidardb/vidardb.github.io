@@ -25,7 +25,7 @@ $(document).ready(function () {
 		var data_select = $("#data_select option:selected").val();
 		var use_vidar = "false";
 		
-		var baseUrl = "http://107.22.104.10:8000/query/";
+		var baseUrl = "https://api.vidardb.com/query/";
 		var getUrl = baseUrl + query_select + "?" + "vidardb=";
 
 		if (data_select == "vidardb") {
